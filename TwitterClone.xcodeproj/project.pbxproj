@@ -13,6 +13,7 @@
 		70453B542982B377005A1E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70453B522982B377005A1E4E /* Main.storyboard */; };
 		70453B562982B37D005A1E4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70453B552982B37D005A1E4E /* Assets.xcassets */; };
 		70453B592982B37D005A1E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70453B572982B37D005A1E4E /* LaunchScreen.storyboard */; };
+		70453B6A2982BA0C005A1E4E /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B692982BA0B005A1E4E /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		70453B552982B37D005A1E4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70453B582982B37D005A1E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70453B5A2982B37D005A1E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70453B692982BA0B005A1E4E /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,12 @@
 		70453B4B2982B377005A1E4E /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				70453B662982B9A4005A1E4E /* Model */,
+				70453B652982B9A2005A1E4E /* View */,
+				70453B642982B9A0005A1E4E /* ViewModel */,
+				70453B632982B99D005A1E4E /* Controller */,
+				70453B622982B99B005A1E4E /* API */,
+				70453B602982B993005A1E4E /* Utils */,
 				70453B4C2982B377005A1E4E /* AppDelegate.swift */,
 				70453B4E2982B377005A1E4E /* SceneDelegate.swift */,
 				70453B502982B377005A1E4E /* ViewController.swift */,
@@ -65,6 +73,49 @@
 				70453B5A2982B37D005A1E4E /* Info.plist */,
 			);
 			path = TwitterClone;
+			sourceTree = "<group>";
+		};
+		70453B602982B993005A1E4E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		70453B622982B99B005A1E4E /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		70453B632982B99D005A1E4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70453B692982BA0B005A1E4E /* MainTabController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70453B642982B9A0005A1E4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70453B652982B9A2005A1E4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70453B662982B9A4005A1E4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +191,7 @@
 			files = (
 				70453B512982B377005A1E4E /* ViewController.swift in Sources */,
 				70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */,
+				70453B6A2982BA0C005A1E4E /* MainTabController.swift in Sources */,
 				70453B4F2982B377005A1E4E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +347,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +376,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
