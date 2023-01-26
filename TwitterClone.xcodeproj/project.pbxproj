@@ -18,6 +18,7 @@
 		70453B6E2982CC00005A1E4E /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B6D2982CC00005A1E4E /* ExploreController.swift */; };
 		70453B702982CC0E005A1E4E /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B6F2982CC0E005A1E4E /* NotificationsController.swift */; };
 		70453B722982CC1D005A1E4E /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B712982CC1D005A1E4E /* ConversationsController.swift */; };
+		70453B742982E07F005A1E4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B732982E07F005A1E4E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		70453B6D2982CC00005A1E4E /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		70453B6F2982CC0E005A1E4E /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		70453B712982CC1D005A1E4E /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		70453B732982E07F005A1E4E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		70453B602982B993005A1E4E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				70453B732982E07F005A1E4E /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70453B512982B377005A1E4E /* ViewController.swift in Sources */,
+				70453B742982E07F005A1E4E /* Extensions.swift in Sources */,
 				70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */,
 				70453B722982CC1D005A1E4E /* ConversationsController.swift in Sources */,
 				70453B6C2982CBC3005A1E4E /* FeedController.swift in Sources */,
