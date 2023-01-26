@@ -1,5 +1,5 @@
 //
-//  ExploreController.swift
+//  FeedController.swift
 //  TwitterClone
 //
 //  Created by ibrahim uysal on 26.01.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExploreController: UIViewController {
+class FeedController: UIViewController {
     
     //MARK: - Properties
     
@@ -22,6 +22,10 @@ class ExploreController: UIViewController {
     
     private func configureUI() {
         view.backgroundColor = .white
-        navigationItem.title = "Explore"
+        
+        let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
     }
+    
 }
