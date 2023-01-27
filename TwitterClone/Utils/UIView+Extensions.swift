@@ -1,8 +1,8 @@
 //
-//  Extensions.swift
+//  UIView+Extensions.swift
 //  TwitterClone
 //
-//  Created by ibrahim uysal on 26.01.2023.
+//  Created by ibrahim uysal on 27.01.2023.
 //
 
 import UIKit
@@ -46,50 +46,35 @@ extension UIView {
         }
     }
     
-    func center(inView view: UIView, yConstant: CGFloat? = 0) {
+    func centerX(inView view: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: yConstant!).isActive = true
     }
     
-    func centerX(inView view: UIView, topAnchor: NSLayoutYAxisAnchor? = nil, paddingTop: CGFloat? = 0) {
-        translatesAutoresizingMaskIntoConstraints = false
-        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    func centerY(inView view: UIView, leftAnchor: NSLayoutXAxisAnchor? = nil,
+                 paddingLeft: CGFloat = 0, constant: CGFloat = 0) {
         
-        if let topAnchor = topAnchor {
-            self.topAnchor.constraint(equalTo: topAnchor, constant: paddingTop!).isActive = true
+        translatesAutoresizingMaskIntoConstraints = false
+        centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant).isActive = true
+        
+        if let left = leftAnchor {
+            anchor(left: left, paddingLeft: paddingLeft)
         }
     }
     
-    func centerY(inView view: UIView, leftAnchor: NSLayoutXAxisAnchor? = nil, paddingLeft: CGFloat? = nil, constant: CGFloat? = 0) {
+    func setDimensions(height: CGFloat, width: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
-        
-        centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant!).isActive = true
-        
-        if let leftAnchor = leftAnchor, let padding = paddingLeft {
-            self.leftAnchor.constraint(equalTo: leftAnchor, constant: padding).isActive = true
-        }
-    }
-    
-    func setDimensions(width: CGFloat, height: CGFloat) {
-        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: height).isActive = true
         widthAnchor.constraint(equalToConstant: width).isActive = true
+    }
+    
+    func setHeight(height: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
-    func addConstraintsToFillView(_ view: UIView) {
+    func setWidth(width: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
-        anchor(top: view.topAnchor, left: view.leftAnchor,
-               bottom: view.bottomAnchor, right: view.rightAnchor)
+        widthAnchor.constraint(equalToConstant: width).isActive = true
     }
-}
-
-// MARK: - UIColor
-
-extension UIColor {
-    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
-        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
-    }
-    
-    static let twitterBlue = UIColor.rgb(red: 29, green: 161, blue: 242)
 }
