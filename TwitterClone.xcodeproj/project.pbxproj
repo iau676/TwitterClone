@@ -32,6 +32,7 @@
 		70453B9329842E7D005A1E4E /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 70453B9229842E7D005A1E4E /* JGProgressHUD */; };
 		70453B9529842FFB005A1E4E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9429842FFB005A1E4E /* UIViewController+Extensions.swift */; };
 		70453B9929843078005A1E4E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9829843078005A1E4E /* UIView+Extensions.swift */; };
+		70453B9D29848ADA005A1E4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9C29848ADA005A1E4E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		70453B8C2983DD1A005A1E4E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		70453B9429842FFB005A1E4E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		70453B9829843078005A1E4E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		70453B9C29848ADA005A1E4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				70453B8C2983DD1A005A1E4E /* UIColor+Extensions.swift */,
 				70453B9429842FFB005A1E4E /* UIViewController+Extensions.swift */,
 				70453B9829843078005A1E4E /* UIView+Extensions.swift */,
+				70453B9C29848ADA005A1E4E /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				70453B772983B860005A1E4E /* LoginController.swift in Sources */,
 				70453B872983DC48005A1E4E /* RegistrationController.swift in Sources */,
 				70453B8B2983DCEF005A1E4E /* CustomTextField.swift in Sources */,
+				70453B9D29848ADA005A1E4E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
