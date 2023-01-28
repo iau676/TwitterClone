@@ -119,31 +119,14 @@ class RegistrationController: UIViewController {
             print("DEBUG: Select profile image..")
             return
         }
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
-        let filename = NSUUID().uuidString
-        let storageRef = STORAGE_PROFILE_IMAGES.child(filename)
         
+        let credentials = RegistrationCredentials(email: email, password: password, fullname: fullName, username: username, profileImage: profileImage)
         
-        storageRef.putData(imageData) { meta, error in
-            storageRef.downloadURL { url, error in
-                guard let profileImageUrl = url?.absoluteString else { return }
-                Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                    if let error = error {
-                        print("DEBUG: Error is \(error.localizedDescription)")
-                    }
-                    
-                    guard let uid = result?.user.uid else { return }
-                    
-                    let values = ["email": email,
-                                  "username": username,
-                                  "fullname": fullName,
-                                  "profileImageUrl": profileImageUrl]
-                    
-                    REF_USERS.child(uid).updateChildValues(values) { error, ref in
-                        print("DEBUG: success updated user information..")
-                    }
-                }
-            }
+        AuthService.shared.registerUser(credentials: credentials) { error, ref in
+            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow}) else { return }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            tab.authenticateUserAndConfigureUI()
+            self.dismiss(animated: true)
         }
         
 //        showLoader(show: true)

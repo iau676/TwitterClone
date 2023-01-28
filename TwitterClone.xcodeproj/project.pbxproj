@@ -33,6 +33,7 @@
 		70453B9529842FFB005A1E4E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9429842FFB005A1E4E /* UIViewController+Extensions.swift */; };
 		70453B9929843078005A1E4E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9829843078005A1E4E /* UIView+Extensions.swift */; };
 		70453B9D29848ADA005A1E4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9C29848ADA005A1E4E /* Constants.swift */; };
+		70453B9F29849814005A1E4E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9E29849814005A1E4E /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		70453B9429842FFB005A1E4E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		70453B9829843078005A1E4E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		70453B9C29848ADA005A1E4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70453B9E29849814005A1E4E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		70453B622982B99B005A1E4E /* API */ = {
 			isa = PBXGroup;
 			children = (
+				70453B9E29849814005A1E4E /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */,
 				70453B9529842FFB005A1E4E /* UIViewController+Extensions.swift in Sources */,
 				70453B722982CC1D005A1E4E /* ConversationsController.swift in Sources */,
+				70453B9F29849814005A1E4E /* AuthService.swift in Sources */,
 				70453B6C2982CBC3005A1E4E /* FeedController.swift in Sources */,
 				70453B6A2982BA0C005A1E4E /* MainTabController.swift in Sources */,
 				70453B702982CC0E005A1E4E /* NotificationsController.swift in Sources */,
