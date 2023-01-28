@@ -34,6 +34,8 @@
 		70453B9929843078005A1E4E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9829843078005A1E4E /* UIView+Extensions.swift */; };
 		70453B9D29848ADA005A1E4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9C29848ADA005A1E4E /* Constants.swift */; };
 		70453B9F29849814005A1E4E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B9E29849814005A1E4E /* AuthService.swift */; };
+		70453BA129851D34005A1E4E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA029851D33005A1E4E /* UserService.swift */; };
+		70453BA3298525F4005A1E4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA2298525F4005A1E4E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		70453B9829843078005A1E4E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		70453B9C29848ADA005A1E4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70453B9E29849814005A1E4E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		70453BA029851D33005A1E4E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		70453BA2298525F4005A1E4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				70453B9E29849814005A1E4E /* AuthService.swift */,
+				70453BA029851D33005A1E4E /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 		70453B662982B9A4005A1E4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70453BA2298525F4005A1E4E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,9 +294,11 @@
 				70453B8D2983DD1A005A1E4E /* UIColor+Extensions.swift in Sources */,
 				70453B6E2982CC00005A1E4E /* ExploreController.swift in Sources */,
 				70453B772983B860005A1E4E /* LoginController.swift in Sources */,
+				70453BA129851D34005A1E4E /* UserService.swift in Sources */,
 				70453B872983DC48005A1E4E /* RegistrationController.swift in Sources */,
 				70453B8B2983DCEF005A1E4E /* CustomTextField.swift in Sources */,
 				70453B9D29848ADA005A1E4E /* Constants.swift in Sources */,
+				70453BA3298525F4005A1E4E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
