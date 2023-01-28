@@ -37,6 +37,8 @@
 		70453BA129851D34005A1E4E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA029851D33005A1E4E /* UserService.swift */; };
 		70453BA3298525F4005A1E4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA2298525F4005A1E4E /* User.swift */; };
 		70453BA629853309005A1E4E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 70453BA529853309005A1E4E /* SDWebImage */; };
+		70453BA829854CC1005A1E4E /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA729854CC1005A1E4E /* UploadTweetController.swift */; };
+		70453BAA298569DD005A1E4E /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA9298569DD005A1E4E /* CaptionTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		70453B9E29849814005A1E4E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		70453BA029851D33005A1E4E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		70453BA2298525F4005A1E4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		70453BA729854CC1005A1E4E /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		70453BA9298569DD005A1E4E /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 				70453B6D2982CC00005A1E4E /* ExploreController.swift */,
 				70453B6F2982CC0E005A1E4E /* NotificationsController.swift */,
 				70453B712982CC1D005A1E4E /* ConversationsController.swift */,
+				70453BA729854CC1005A1E4E /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			children = (
 				70453B882983DC6C005A1E4E /* InputContainerView.swift */,
 				70453B8A2983DCEF005A1E4E /* CustomTextField.swift */,
+				70453BA9298569DD005A1E4E /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,9 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70453B512982B377005A1E4E /* ViewController.swift in Sources */,
+				70453BAA298569DD005A1E4E /* CaptionTextView.swift in Sources */,
 				70453B852983DC15005A1E4E /* RegistrationViewModel.swift in Sources */,
 				70453B832983DBFE005A1E4E /* LoginViewModel.swift in Sources */,
 				70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */,
+				70453BA829854CC1005A1E4E /* UploadTweetController.swift in Sources */,
 				70453B9529842FFB005A1E4E /* UIViewController+Extensions.swift in Sources */,
 				70453B722982CC1D005A1E4E /* ConversationsController.swift in Sources */,
 				70453B9F29849814005A1E4E /* AuthService.swift in Sources */,
