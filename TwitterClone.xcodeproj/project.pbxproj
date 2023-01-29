@@ -41,6 +41,7 @@
 		70453BAA298569DD005A1E4E /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BA9298569DD005A1E4E /* CaptionTextView.swift */; };
 		70453BAC29856F20005A1E4E /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BAB29856F20005A1E4E /* TweetService.swift */; };
 		70453BAE2985766E005A1E4E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BAD2985766E005A1E4E /* Tweet.swift */; };
+		7072B1B62986BC2200A705BB /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072B1B52986BC2200A705BB /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		70453BA9298569DD005A1E4E /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		70453BAB29856F20005A1E4E /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		70453BAD2985766E005A1E4E /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		7072B1B52986BC2200A705BB /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				70453B882983DC6C005A1E4E /* InputContainerView.swift */,
 				70453B8A2983DCEF005A1E4E /* CustomTextField.swift */,
 				70453BA9298569DD005A1E4E /* CaptionTextView.swift */,
+				7072B1B52986BC2200A705BB /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				70453B872983DC48005A1E4E /* RegistrationController.swift in Sources */,
 				70453B8B2983DCEF005A1E4E /* CustomTextField.swift in Sources */,
 				70453B9D29848ADA005A1E4E /* Constants.swift in Sources */,
+				7072B1B62986BC2200A705BB /* TweetCell.swift in Sources */,
 				70453BA3298525F4005A1E4E /* User.swift in Sources */,
 				70453BAC29856F20005A1E4E /* TweetService.swift in Sources */,
 			);
