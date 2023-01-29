@@ -42,6 +42,7 @@
 		70453BAC29856F20005A1E4E /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BAB29856F20005A1E4E /* TweetService.swift */; };
 		70453BAE2985766E005A1E4E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BAD2985766E005A1E4E /* Tweet.swift */; };
 		7072B1B62986BC2200A705BB /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072B1B52986BC2200A705BB /* TweetCell.swift */; };
+		7072B1B82986F42C00A705BB /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072B1B72986F42C00A705BB /* TweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		70453BAB29856F20005A1E4E /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		70453BAD2985766E005A1E4E /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7072B1B52986BC2200A705BB /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		7072B1B72986F42C00A705BB /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				70453B812983DBE4005A1E4E /* Authentication */,
+				7072B1B72986F42C00A705BB /* TweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				70453B702982CC0E005A1E4E /* NotificationsController.swift in Sources */,
 				70453B892983DC6C005A1E4E /* InputContainerView.swift in Sources */,
 				70453B4F2982B377005A1E4E /* SceneDelegate.swift in Sources */,
+				7072B1B82986F42C00A705BB /* TweetViewModel.swift in Sources */,
 				70453B9929843078005A1E4E /* UIView+Extensions.swift in Sources */,
 				70453B8D2983DD1A005A1E4E /* UIColor+Extensions.swift in Sources */,
 				70453B6E2982CC00005A1E4E /* ExploreController.swift in Sources */,
