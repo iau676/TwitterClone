@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702E3F4429872B9C008103B1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E3F4329872B9C008103B1 /* ProfileController.swift */; };
 		70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B4C2982B377005A1E4E /* AppDelegate.swift */; };
 		70453B4F2982B377005A1E4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B4E2982B377005A1E4E /* SceneDelegate.swift */; };
 		70453B512982B377005A1E4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B502982B377005A1E4E /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		702E3F4329872B9C008103B1 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		70453B492982B377005A1E4E /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70453B4C2982B377005A1E4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70453B4E2982B377005A1E4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				70453B6F2982CC0E005A1E4E /* NotificationsController.swift */,
 				70453B712982CC1D005A1E4E /* ConversationsController.swift */,
 				70453BA729854CC1005A1E4E /* UploadTweetController.swift */,
+				702E3F4329872B9C008103B1 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */,
 				70453BA829854CC1005A1E4E /* UploadTweetController.swift in Sources */,
 				70453B9529842FFB005A1E4E /* UIViewController+Extensions.swift in Sources */,
+				702E3F4429872B9C008103B1 /* ProfileController.swift in Sources */,
 				70453B722982CC1D005A1E4E /* ConversationsController.swift in Sources */,
 				70453B9F29849814005A1E4E /* AuthService.swift in Sources */,
 				70453B6C2982CBC3005A1E4E /* FeedController.swift in Sources */,
