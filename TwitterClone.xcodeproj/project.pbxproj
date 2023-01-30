@@ -44,6 +44,7 @@
 		70453BAE2985766E005A1E4E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453BAD2985766E005A1E4E /* Tweet.swift */; };
 		7072B1B62986BC2200A705BB /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072B1B52986BC2200A705BB /* TweetCell.swift */; };
 		7072B1B82986F42C00A705BB /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072B1B72986F42C00A705BB /* TweetViewModel.swift */; };
+		708BC8532987419F0022A17B /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BC8522987419F0022A17B /* ProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		70453BAD2985766E005A1E4E /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7072B1B52986BC2200A705BB /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		7072B1B72986F42C00A705BB /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		708BC8522987419F0022A17B /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				70453B8A2983DCEF005A1E4E /* CustomTextField.swift */,
 				70453BA9298569DD005A1E4E /* CaptionTextView.swift */,
 				7072B1B52986BC2200A705BB /* TweetCell.swift */,
+				708BC8522987419F0022A17B /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				70453B9D29848ADA005A1E4E /* Constants.swift in Sources */,
 				7072B1B62986BC2200A705BB /* TweetCell.swift in Sources */,
 				70453BA3298525F4005A1E4E /* User.swift in Sources */,
+				708BC8532987419F0022A17B /* ProfileHeader.swift in Sources */,
 				70453BAC29856F20005A1E4E /* TweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
