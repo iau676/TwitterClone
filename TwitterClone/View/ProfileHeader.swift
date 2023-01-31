@@ -29,7 +29,7 @@ class ProfileHeader: UICollectionReusableView {
         
         view.addSubview(backButton)
         backButton.anchor(top: view.topAnchor, left: view.leftAnchor,
-                          paddingTop: 42, paddingLeft: 16)
+                          paddingTop: 32, paddingLeft: 16)
         backButton.setDimensions(height: 30, width: 30)
         return view
     }()
