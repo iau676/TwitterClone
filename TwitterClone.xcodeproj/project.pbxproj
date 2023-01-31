@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7022F0A42989619000143D78 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7022F0A32989619000143D78 /* UserCell.swift */; };
 		702E3F4429872B9C008103B1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E3F4329872B9C008103B1 /* ProfileController.swift */; };
 		70453B4D2982B377005A1E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B4C2982B377005A1E4E /* AppDelegate.swift */; };
 		70453B4F2982B377005A1E4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70453B4E2982B377005A1E4E /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7022F0A32989619000143D78 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		702E3F4329872B9C008103B1 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		70453B492982B377005A1E4E /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70453B4C2982B377005A1E4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				708BC8522987419F0022A17B /* ProfileHeader.swift */,
 				708BC85429874E950022A17B /* ProfileFilterView.swift */,
 				708BC8562987501A0022A17B /* ProfileFilterCell.swift */,
+				7022F0A32989619000143D78 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				7072B1B82986F42C00A705BB /* TweetViewModel.swift in Sources */,
 				70453B9929843078005A1E4E /* UIView+Extensions.swift in Sources */,
 				70453B8D2983DD1A005A1E4E /* UIColor+Extensions.swift in Sources */,
+				7022F0A42989619000143D78 /* UserCell.swift in Sources */,
 				70453B6E2982CC00005A1E4E /* ExploreController.swift in Sources */,
 				708BC8572987501A0022A17B /* ProfileFilterCell.swift in Sources */,
 				70453B772983B860005A1E4E /* LoginController.swift in Sources */,
