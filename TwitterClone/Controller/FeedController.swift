@@ -99,6 +99,14 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
 //MARK: - TweetCellDelegate
 
 extension FeedController: TweetCellDelegate {
+    func replyPressed(_ cell: TweetCell) {
+        guard let tweet = cell.tweet else { return }
+        let controller = UploadTweetController(user: tweet.user, config: .reply(tweet))
+        let nav = UINavigationController(rootViewController: controller)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
+    }
+    
     func profileImagePressed(_ cell: TweetCell) {
         guard let user = cell.tweet?.user else { return }
         let controller = ProfileController(user: user)

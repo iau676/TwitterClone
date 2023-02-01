@@ -51,6 +51,7 @@
 		708BC85529874E950022A17B /* ProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BC85429874E950022A17B /* ProfileFilterView.swift */; };
 		708BC8572987501A0022A17B /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BC8562987501A0022A17B /* ProfileFilterCell.swift */; };
 		708BC859298758840022A17B /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BC858298758840022A17B /* ProfileHeaderViewModel.swift */; };
+		70D6695E298AB30200721870 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6695D298AB30100721870 /* UploadTweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		708BC85429874E950022A17B /* ProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterView.swift; sourceTree = "<group>"; };
 		708BC8562987501A0022A17B /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		708BC858298758840022A17B /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		70D6695D298AB30100721870 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				70453B812983DBE4005A1E4E /* Authentication */,
 				7072B1B72986F42C00A705BB /* TweetViewModel.swift */,
 				708BC858298758840022A17B /* ProfileHeaderViewModel.swift */,
+				70D6695D298AB30100721870 /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				708BC859298758840022A17B /* ProfileHeaderViewModel.swift in Sources */,
 				708BC8532987419F0022A17B /* ProfileHeader.swift in Sources */,
 				70453BAC29856F20005A1E4E /* TweetService.swift in Sources */,
+				70D6695E298AB30200721870 /* UploadTweetViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

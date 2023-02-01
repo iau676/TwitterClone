@@ -9,6 +9,7 @@ import UIKit
 
 protocol TweetCellDelegate: AnyObject {
     func profileImagePressed(_ cell: TweetCell)
+    func replyPressed(_ cell: TweetCell)
 }
 
 class TweetCell: UICollectionViewCell {
@@ -131,7 +132,7 @@ class TweetCell: UICollectionViewCell {
     }
     
     @objc func commentPressed() {
-        
+        delegate?.replyPressed(self)
     }
     
     @objc func retweetPressed() {
