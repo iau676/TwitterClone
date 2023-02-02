@@ -10,6 +10,7 @@ import UIKit
 protocol TweetCellDelegate: AnyObject {
     func profileImagePressed(_ cell: TweetCell)
     func replyPressed(_ cell: TweetCell)
+    func likePressed(_ cell: TweetCell)
 }
 
 class TweetCell: UICollectionViewCell {
@@ -140,7 +141,7 @@ class TweetCell: UICollectionViewCell {
     }
     
     @objc func likePressed() {
-        
+        delegate?.likePressed(self)
     }
     
     @objc func sharePressed() {
@@ -156,5 +157,8 @@ class TweetCell: UICollectionViewCell {
         
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
         infoLabel.attributedText = viewModel.userInfoText
+        
+        likeButton.tintColor = viewModel.likeButtonTintColor
+        likeButton.setImage(viewModel.likeButtonImage, for: .normal)
     }
 }
