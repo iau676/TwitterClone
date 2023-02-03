@@ -58,6 +58,7 @@
 		70DA340F298C98CA009246FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DA340E298C98CA009246FB /* Notification.swift */; };
 		70DA3411298C9AEC009246FB /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DA3410298C9AEC009246FB /* NotificationService.swift */; };
 		70DA3413298D182F009246FB /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DA3412298D182F009246FB /* NotificationCell.swift */; };
+		70DA3415298D27E5009246FB /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DA3414298D27E5009246FB /* NotificationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		70DA340E298C98CA009246FB /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		70DA3410298C9AEC009246FB /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		70DA3412298D182F009246FB /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		70DA3414298D27E5009246FB /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				708BC858298758840022A17B /* ProfileHeaderViewModel.swift */,
 				70D6695D298AB30100721870 /* UploadTweetViewModel.swift */,
 				70580AEB298B2C7800B2C9FB /* ActionSheetViewModel.swift */,
+				70DA3414298D27E5009246FB /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				708BC85529874E950022A17B /* ProfileFilterView.swift in Sources */,
 				70453B722982CC1D005A1E4E /* ConversationsController.swift in Sources */,
 				70453B9F29849814005A1E4E /* AuthService.swift in Sources */,
+				70DA3415298D27E5009246FB /* NotificationViewModel.swift in Sources */,
 				70580AEC298B2C7800B2C9FB /* ActionSheetViewModel.swift in Sources */,
 				703898912989DE7F00A9FB05 /* TweetController.swift in Sources */,
 				70453B6C2982CBC3005A1E4E /* FeedController.swift in Sources */,

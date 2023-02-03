@@ -7,9 +7,19 @@
 
 import UIKit
 
+protocol NotificationCellDelegate: AnyObject {
+    func profileImagePressed(_ cell: NotificationCell)
+}
+
 class NotificationCell: UITableViewCell {
     
     //MARK: - Properties
+    
+    var notification: Notification? {
+        didSet { configure() }
+    }
+    
+    weak var delegate: NotificationCellDelegate?
 
     private lazy var profileImageView: UIImageView = {
        let iv = UIImageView()
@@ -54,6 +64,16 @@ class NotificationCell: UITableViewCell {
     //MARK: - Selectors
     
     @objc func profileImagePressed() {
+        delegate?.profileImagePressed(self)
+    }
+    
+    //MARK: - Helpers
+    
+    func configure() {
+        guard let notification = notification else { return }
+        let viewModel = NotificationViewModel(notification: notification)
         
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        notificationLabel.attributedText = viewModel.notificationText
     }
 }
