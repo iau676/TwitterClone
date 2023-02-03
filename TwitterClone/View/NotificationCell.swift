@@ -9,6 +9,7 @@ import UIKit
 
 protocol NotificationCellDelegate: AnyObject {
     func profileImagePressed(_ cell: NotificationCell)
+    func followButtonPressed(_ cell: NotificationCell)
 }
 
 class NotificationCell: UITableViewCell {
@@ -35,11 +36,21 @@ class NotificationCell: UITableViewCell {
         return iv
     }()
     
+    private lazy var followButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitleColor(UIColor.twitterBlue, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.backgroundColor = .white
+        button.layer.borderColor = UIColor.twitterBlue.cgColor
+        button.layer.borderWidth = 1
+        button.addTarget(self, action: #selector(followButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     let notificationLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "Some test notification message"
         return label
     }()
     
@@ -55,6 +66,12 @@ class NotificationCell: UITableViewCell {
         addSubview(stack)
         stack.centerY(inView: self)
         stack.anchor(left: leftAnchor, right: rightAnchor, paddingLeft: 12, paddingRight: 12)
+        
+        addSubview(followButton)
+        followButton.centerY(inView: self)
+        followButton.setDimensions(height: 32, width: 88)
+        followButton.layer.cornerRadius = 32 / 2
+        followButton.anchor(right: rightAnchor, paddingRight: 12)
     }
     
     required init?(coder: NSCoder) {
@@ -67,6 +84,10 @@ class NotificationCell: UITableViewCell {
         delegate?.profileImagePressed(self)
     }
     
+    @objc func followButtonPressed() {
+        delegate?.followButtonPressed(self)
+    }
+    
     //MARK: - Helpers
     
     func configure() {
@@ -75,5 +96,8 @@ class NotificationCell: UITableViewCell {
         
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
         notificationLabel.attributedText = viewModel.notificationText
+        
+        followButton.isHidden = viewModel.showHideFollowButton
+        followButton.setTitle(viewModel.followButtonText, for: .normal)
     }
 }
