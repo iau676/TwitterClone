@@ -28,7 +28,9 @@ class NotificationsController: UITableViewController {
     //MARK: - API
     
     func fetchNotifications() {
+        refreshControl?.beginRefreshing()
         NotificationService.shared.fetchNotifications { notifications in
+            self.refreshControl?.endRefreshing()
             self.notifications = notifications
             self.checkIfUserIsFollowed(notifications: notifications)
         }
@@ -46,16 +48,25 @@ class NotificationsController: UITableViewController {
         }
     }
     
+    //MARK: - Selectors
+    
+    @objc func handleRefresh() {
+        fetchNotifications()
+    }
+    
     //MARK: - Helpers
     
     private func configureUI() {
         view.backgroundColor = .white
         navigationItem.title = "Notifications"
         
-        tableView.backgroundColor = .yellow
         tableView.register(NotificationCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
+        
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
     }
 }
 
