@@ -98,18 +98,14 @@ class TweetCell: UICollectionViewCell {
         
         let captionStack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
         captionStack.axis = .vertical
-        captionStack.distribution = .fillProportionally
         captionStack.spacing = 4
 
         let imageCaptionStack = UIStackView(arrangedSubviews: [profileImageView, captionStack])
-        imageCaptionStack.distribution = .fillProportionally
         imageCaptionStack.spacing = 12
         imageCaptionStack.alignment = .leading
-
         
         let stack = UIStackView(arrangedSubviews: [replyLabel, imageCaptionStack])
         stack.axis = .vertical
-        stack.distribution = .fillProportionally
         stack.spacing = 8
         
         addSubview(stack)
@@ -118,7 +114,6 @@ class TweetCell: UICollectionViewCell {
                      paddingLeft: 12, paddingRight: 12)
         
         infoLabel.font = UIFont.systemFont(ofSize: 14)
-        infoLabel.text = "water lily @water"
         
         let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton,
                                                          likeButton, shareButton])

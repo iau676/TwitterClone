@@ -96,6 +96,11 @@ extension TweetController {
         header.delegate = self
         return header
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = TweetController(tweet: replies[indexPath.row])
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 //MARK: - TweetHeaderDelegate
