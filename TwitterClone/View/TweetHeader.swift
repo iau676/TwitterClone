@@ -212,7 +212,10 @@ class TweetHeader: UICollectionReusableView {
         profileImageView.sd_setImage(with: tweet.user.profileImageUrl)
         dateLabel.text = viewModel.headerTimestamp
         retweetsLabel.attributedText = viewModel.retweetsAttributedString
+        
         likesLabel.attributedText = viewModel.likesAttributedString
+        likeButton.setImage(viewModel.likeButtonImage, for: .normal)
+        likeButton.tintColor = viewModel.likeButtonTintColor
     }
     
     func createButton(withImageName imageName: String) -> UIButton {
