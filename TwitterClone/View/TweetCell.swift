@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ActiveLabel
 
 protocol TweetCellDelegate: AnyObject {
     func profileImagePressed(_ cell: TweetCell)
@@ -37,17 +38,20 @@ class TweetCell: UICollectionViewCell {
         return iv
     }()
     
-    private let replyLabel: UILabel = {
-        let label = UILabel()
+    private let replyLabel: ActiveLabel = {
+        let label = ActiveLabel()
         label.textColor = .lightGray
         label.font = UIFont.systemFont(ofSize: 12)
+        label.mentionColor = .twitterBlue
         return label
     }()
     
-    private let captionLabel: UILabel = {
-       let label = UILabel()
+    private let captionLabel: ActiveLabel = {
+       let label = ActiveLabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.numberOfLines = 0
+        label.mentionColor = .twitterBlue
+        label.hashtagColor = .twitterBlue
         return label
     }()
     
@@ -129,6 +133,7 @@ class TweetCell: UICollectionViewCell {
         addSubview(underlineView)
         underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
         
+        configureMentionHandler()
     }
     
     required init?(coder: NSCoder) {
@@ -172,5 +177,15 @@ class TweetCell: UICollectionViewCell {
         
         replyLabel.isHidden = viewModel.shouldHideReplyLabel
         replyLabel.text = viewModel.replyText
+    }
+    
+    func configureMentionHandler() {
+        captionLabel.handleMentionTap { mention in
+            print("DEBUG: Go to user profile for \(mention)")
+        }
+        
+        replyLabel.handleMentionTap { mention in
+            print("DEBUG: Go to user profile for \(mention)")
+        }
     }
 }
