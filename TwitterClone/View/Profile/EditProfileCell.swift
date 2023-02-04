@@ -7,14 +7,19 @@
 
 import UIKit
 
+protocol EditProfileCellDelegate: AnyObject {
+    func updateUserInfo(_ cell: EditProfileCell)
+}
 
-class EditProfileCell: UITableViewCell {
+class EditProfileCell: UITableViewCell, UITextFieldDelegate {
     
     //MARK: - Properties
     
     var viewModel: EditProfileViewModel? {
         didSet { configure() }
     }
+    
+    weak var delegate: EditProfileCellDelegate?
     
     let titleLabel: UILabel = {
        let label = UILabel()
@@ -37,7 +42,7 @@ class EditProfileCell: UITableViewCell {
        let tv = InputTextView()
         tv.font = UIFont.systemFont(ofSize: 14)
         tv.textColor = .twitterBlue
-        tv.placeholderLabel.text = "Bioo"
+        tv.placeholderLabel.text = "Bio"
         return tv
     }()
     
@@ -56,7 +61,10 @@ class EditProfileCell: UITableViewCell {
         
         addSubview(bioTextView)
         bioTextView.anchor(top: topAnchor, left: titleLabel.rightAnchor, bottom: bottomAnchor,
-                             right: rightAnchor, paddingTop: 4, paddingLeft: 16, paddingRight: 8)
+                           right: rightAnchor, paddingTop: 4, paddingLeft: 16, paddingRight: 8)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleUpdateUserInfo),
+                                               name: UITextView.textDidChangeNotification, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -66,7 +74,8 @@ class EditProfileCell: UITableViewCell {
     //MARK: - Selectors
     
     @objc func handleUpdateUserInfo() {
-        
+        print("DEBUG: handleUpdateUserInfo")
+        delegate?.updateUserInfo(self)
     }
     
     //MARK: - Helpers
