@@ -59,6 +59,13 @@ class FeedController: UICollectionViewController {
         fetchTweets()
     }
     
+    @objc func currentProfileImagePressed() {
+        guard let user = user else { return }
+        
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     //MARK: - Helpers
     
     private func configureUI() {
@@ -84,7 +91,11 @@ class FeedController: UICollectionViewController {
         profileImageView.setDimensions(height: 32, width: 32)
         profileImageView.layer.cornerRadius = 32 / 2
         profileImageView.layer.masksToBounds = true
+        profileImageView.isUserInteractionEnabled = true
         profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(currentProfileImagePressed))
+        profileImageView.addGestureRecognizer(tap)
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
     }
