@@ -81,7 +81,9 @@ class UploadTweetController: UIViewController {
             print("DEBUG: Tweet did upload to database..")
             
             if case .reply(let tweet) = self.config {
-                NotificationService.shared.uploadNotification(type: .reply, tweet: tweet)
+                NotificationService.shared.uploadNotification(user: tweet.user,
+                                                              type: .reply,
+                                                              tweet: tweet)
             }
             
             self.dismiss(animated: true)
