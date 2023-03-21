@@ -47,12 +47,13 @@ class ExploreController: UITableViewController {
     //MARK: - Helpers
     
     private func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         navigationItem.title = "Explore"
         
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .systemBackground
     }
     
     func configureSearchController() {

@@ -39,7 +39,7 @@ class TweetHeader: UICollectionReusableView {
     private let fullnameLabel: UILabel = {
        let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "Water Lily"
+        label.textColor = .label
         return label
     }()
     
@@ -47,7 +47,6 @@ class TweetHeader: UICollectionReusableView {
        let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .lightGray
-        label.text = "@waterlily"
         return label
     }()
     
@@ -92,10 +91,10 @@ class TweetHeader: UICollectionReusableView {
        let view = UIView()
         
         let divider1 = UIView()
-        divider1.backgroundColor = .systemGroupedBackground
+        divider1.backgroundColor = .lightGray
         view.addSubview(divider1)
         divider1.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor,
-                        paddingLeft: 8, height: 1.0)
+                        paddingLeft: 8, height: 0.5)
         
         let stack = UIStackView(arrangedSubviews: [retweetsLabel, likesLabel])
         stack.axis = .horizontal
@@ -109,10 +108,10 @@ class TweetHeader: UICollectionReusableView {
         stack.anchor(left: view.leftAnchor, paddingLeft: 16)
         
         let divider2 = UIView()
-        divider2.backgroundColor = .systemGroupedBackground
+        divider2.backgroundColor = .lightGray
         view.addSubview(divider2)
         divider2.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
-                        paddingLeft: 8, height: 1.0)
+                        paddingLeft: 8, height: 0.5)
         
         return view
     }()
@@ -120,24 +119,28 @@ class TweetHeader: UICollectionReusableView {
     private lazy var commentButton: UIButton = {
        let button = createButton(withImageName: "comment")
         button.addTarget(self, action: #selector(commentPressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
     private lazy var retweetButton: UIButton = {
        let button = createButton(withImageName: "retweet")
         button.addTarget(self, action: #selector(retweetPressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
     private lazy var likeButton: UIButton = {
        let button = createButton(withImageName: "like")
         button.addTarget(self, action: #selector(likePressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
     private lazy var shareButton: UIButton = {
        let button = createButton(withImageName: "share")
         button.addTarget(self, action: #selector(sharePressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
@@ -145,6 +148,10 @@ class TweetHeader: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = .systemBackground
+        retweetsLabel.textColor = .lightGray
+        likesLabel.textColor = .lightGray
                 
         let labelStack = UIStackView(arrangedSubviews: [fullnameLabel, usernameLabel])
         labelStack.axis = .vertical

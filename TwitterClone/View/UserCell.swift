@@ -28,7 +28,7 @@ class UserCell: UITableViewCell {
        let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.numberOfLines = 0
-        label.text = "Username"
+        label.textColor = .label
         return label
     }()
     
@@ -36,7 +36,7 @@ class UserCell: UITableViewCell {
        let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 0
-        label.text = "Fullname"
+        label.textColor = .label
         return label
     }()
     
@@ -45,7 +45,7 @@ class UserCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         addSubview(profileImageView)
         profileImageView.centerY(inView: self)
         profileImageView.anchor(left: leftAnchor, paddingLeft: 12)

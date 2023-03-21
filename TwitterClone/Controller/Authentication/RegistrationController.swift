@@ -109,8 +109,6 @@ class RegistrationController: UIViewController {
     }
     
     @objc private func handleRegistration() {
-        print(">>handleRegistration")
-        
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let fullName = fullNameTextField.text else { return }
@@ -122,7 +120,9 @@ class RegistrationController: UIViewController {
         
         let credentials = RegistrationCredentials(email: email, password: password, fullname: fullName, username: username, profileImage: profileImage)
         
+        showLoader(show: true)
         AuthService.shared.registerUser(credentials: credentials) { error, ref in
+            self.showLoader(show: false)
             guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow}) else { return }
             guard let tab = window.rootViewController as? MainTabController else { return }
             tab.authenticateUserAndConfigureUI()

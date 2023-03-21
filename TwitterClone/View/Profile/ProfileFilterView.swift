@@ -22,7 +22,7 @@ class ProfileFilterView: UIView {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .white
+        cv.backgroundColor = .systemBackground
         cv.delegate = self
         cv.dataSource = self
         return cv

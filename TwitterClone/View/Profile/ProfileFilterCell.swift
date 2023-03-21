@@ -32,7 +32,7 @@ class ProfileFilterCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         
         addSubview(titleLabel)
         titleLabel.centerX(inView: self)

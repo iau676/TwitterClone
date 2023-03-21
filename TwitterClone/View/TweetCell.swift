@@ -52,6 +52,7 @@ class TweetCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.mentionColor = .twitterBlue
         label.hashtagColor = .twitterBlue
+        label.textColor = .label
         return label
     }()
     
@@ -60,24 +61,28 @@ class TweetCell: UICollectionViewCell {
     private lazy var commentButton: UIButton = {
        let button = createButton(withImageName: "comment")
         button.addTarget(self, action: #selector(commentPressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
     private lazy var retweetButton: UIButton = {
        let button = createButton(withImageName: "retweet")
         button.addTarget(self, action: #selector(retweetPressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
     private lazy var likeButton: UIButton = {
        let button = createButton(withImageName: "like")
         button.addTarget(self, action: #selector(likePressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
     private lazy var shareButton: UIButton = {
        let button = createButton(withImageName: "share")
         button.addTarget(self, action: #selector(sharePressed), for: .touchUpInside)
+        button.tintColor = .lightGray
         return button
     }()
     
@@ -86,7 +91,7 @@ class TweetCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         
         let captionStack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
         captionStack.axis = .vertical
@@ -106,6 +111,7 @@ class TweetCell: UICollectionViewCell {
                      paddingLeft: 12, paddingRight: 12)
         
         infoLabel.font = UIFont.systemFont(ofSize: 14)
+        infoLabel.textColor = .label
         
         let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton,
                                                          likeButton, shareButton])
@@ -117,9 +123,9 @@ class TweetCell: UICollectionViewCell {
         actionStack.anchor(bottom: bottomAnchor, paddingBottom: 8)
         
         let underlineView = UIView()
-        underlineView.backgroundColor = .systemGroupedBackground
+        underlineView.backgroundColor = .lightGray
         addSubview(underlineView)
-        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
+        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 0.5)
         
         configureMentionHandler()
     }
