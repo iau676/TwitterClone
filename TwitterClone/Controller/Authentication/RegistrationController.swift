@@ -114,32 +114,35 @@ class RegistrationController: UIViewController {
         guard let fullName = fullNameTextField.text else { return }
         guard let username = usernameTextField.text?.lowercased() else { return }
         guard let profileImage = profileImage else {
-            print("DEBUG: Select profile image..")
+            showError("please select image")
             return
         }
         
-        let credentials = RegistrationCredentials(email: email, password: password, fullname: fullName, username: username, profileImage: profileImage)
+        let credentials = RegistrationCredentials(email: email, password: password,
+                                                  fullname: fullName, username: username,
+                                                  profileImage: profileImage)
         
         showLoader(show: true)
-        AuthService.shared.registerUser(credentials: credentials) { error, ref in
-            self.showLoader(show: false)
-            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow}) else { return }
-            guard let tab = window.rootViewController as? MainTabController else { return }
-            tab.authenticateUserAndConfigureUI()
-            self.dismiss(animated: true)
+        AuthService.shared.checkUsername(newUserName: username) { exists in
+            if exists {
+                self.showLoader(show: false)
+                self.showError("username already exists")
+            } else {
+                AuthService.shared.registerUser(credentials: credentials) { error, ref in
+                    self.showLoader(show: false)
+                    
+                    if let error = error {
+                        self.showError(error.localizedDescription)
+                        return
+                    }
+                    
+                    guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow}) else { return }
+                    guard let tab = window.rootViewController as? MainTabController else { return }
+                    tab.authenticateUserAndConfigureUI()
+                    self.dismiss(animated: true)
+                }
+            }
         }
-        
-//        showLoader(show: true)
-
-//        AuthService.shared.createUser(credentials: RegistrationCredentials(email: email, password: password, fullname: fullName, username: username, profileImage: profileImage)) { error in
-//            if let error = error {
-//                self.showLoader(show: false)
-//                self.showError(error.localizedDescription)
-//                return
-//            }
-//            self.showLoader(show: false)
-//            self.delegate?.authenticationComplete()
-//        }
     }
     
     @objc private func handleSelectPhoto() {

@@ -34,7 +34,8 @@ struct AuthService {
                 
                 Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { result, error in
                     if let error = error {
-                        print("DEBUG: Error is \(error.localizedDescription)")
+                        completion(error, REF_USERS)
+                        return
                     }
                     
                     guard let uid = result?.user.uid else { return }
@@ -48,5 +49,19 @@ struct AuthService {
                 }
             }
         }
+    }
+    
+    func checkUsername(newUserName: String, completion: @escaping(Bool) -> Void) {
+
+        REF_USERS.queryOrdered(byChild: "username").queryEqual(toValue: newUserName)
+            .observeSingleEvent(of: .value, with: {(snapshot: DataSnapshot) in
+
+            if snapshot.exists() {
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+        })
     }
 }
